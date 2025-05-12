@@ -1,0 +1,343 @@
+/* File: css/style.css */
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+section {
+  position: relative;
+  padding: 80px 0;
+  z-index: 1;
+}
+
+section::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  z-index: -1;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, #17488C, #0E3A7F, #666BBA, #6B6ABA);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  border-bottom: none;
+}
+
+/* Curved Bottom Line */
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -50px; /* Adjust this value to make the curve more or less pronounced */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Making the curve wider */
+  height: 100px; /* Height of the curve */
+  background: #fff;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+.navbar-blend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e0e7ff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+}
+
+.hero-img {
+  flex: 1 1 300px;
+}
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #fff;
+  color: #3b82f6;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e0e7ff;
+  transform: scale(1.05);
+}
+
+.features, .about, .pricing, .team, .testimonials, .faq, .newsletter {
+  text-align: center;
+  background-color: #f9fafb;
+}
+
+.features:nth-child(even),
+.about:nth-child(even),
+.pricing:nth-child(even),
+.team:nth-child(even),
+.testimonials:nth-child(even),
+.faq:nth-child(even),
+.newsletter:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.features h2,
+.about h2,
+.pricing h2,
+.team h2,
+.testimonials h2,
+.faq h2,
+.newsletter h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.feature-grid, .team-grid, .testimonial-grid, .pricing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature, .member, .pricing-card, .testimonial {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover, .member:hover, .pricing-card:hover, .testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.feature img, .member img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Updated Feature Section */
+.features {
+  background-color: #e0f7fa; /* Light teal background */
+}
+
+.features h2 {
+  color: #00796b; /* Dark teal text */
+}
+
+.feature {
+  background-color: #ffffff;
+  border: 1px solid #b2dfdb; /* Light teal border */
+}
+
+/* Updated Accordion Section */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #b2dfdb; /* Light teal border */
+}
+
+.accordion-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: #00796b; /* Dark teal color for text */
+}
+
+.accordion-toggle:hover {
+  background: #b2dfdb; /* Light teal background on hover */
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.accordion-content.open {
+  padding: 15px;
+}
+
+/* Updated Newsletter Section */
+.newsletter {
+  background-color: #f1f8e9; /* Light lime green */
+}
+
+.newsletter h2 {
+  color: #388e3c; /* Dark green for the title */
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #81c784; /* Light green border */
+  border-radius: 4px;
+  width: 250px;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: #388e3c; /* Green button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #2c6b2f; /* Dark green button hover */
+}
+
+/* Contact Page Styling */
+.contact {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-form {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  box-sizing: border-box;  /* Ensures padding does not affect width */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3b82f6;
+  background-color: #fff;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+footer {
+  background: #1f2937;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+
+
